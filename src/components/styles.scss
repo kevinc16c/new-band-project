@@ -1,0 +1,102 @@
+//Variables
+$body-color2:                 rgba(0, 0, 0, 0.65) !default;
+$white:                 rgb(255, 255, 255) !default;
+$l_boxed_layout_max_width:      1200px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+// screen
+$l_screen_md_min: map-get($grid-breakpoints, lg);
+$l_screen_sm_max: (map-get($grid-breakpoints, lg) - 1);
+
+.app-content {
+    padding: 0 3rem 3rem;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 100vmin;
+}
+
+.app-layout {
+    align-items: stretch; 
+    min-height: 100vh;
+    max-width: 100%;
+    margin: auto; // put it here so that the transition is smooth
+    transition: max-width .35s ease;
+}
+
+.app-header {
+    // badge
+    .ant-badge { 
+      sup {
+        box-shadow: none;
+      }
+    }
+  
+    .bg-dark,
+    .bg-primary,
+    .bg-success,
+    .bg-info,
+    .bg-danger {
+      color: $white;
+      a {
+        color: $white;
+      }
+  
+      // badge
+      .ant-badge { 
+        i {
+          color: $white;
+        }
+      }
+  
+      // search box
+      .search-box {
+        ::placeholder {
+          color: rgba($white, .65);
+        }
+        .input-bar:before,
+        .input-bar:after {
+          background: $white; 
+        }
+      }
+    }
+  
+    .bg-white,
+    .bg-warning {
+      color: $body-color2;
+      a {
+        color: $body-color2;
+      }
+  
+    }
+  }
+  .app-header-inner {
+    display: flex;
+    justify-content: space-between;
+    .header-right {
+      padding-right: 5px;
+    }
+  }
+
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+//Media
+@media only screen and (min-width: $l_screen_md_min) {
+    .app-layout {
+      &.boxed-layout {
+        max-width: $l_boxed_layout_max_width;
+        box-shadow: 0 0 1px rgba(0,0,0,.2);
+        height: 100%;
+      }
+    }
+  }
