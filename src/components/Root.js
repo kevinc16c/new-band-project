@@ -9,7 +9,6 @@ import App from './App';
 export default class Root extends Component {
     
     render() {
-      console.log(this.props)
         const { store, history } = this.props;
         return (
           <Provider store={store}>

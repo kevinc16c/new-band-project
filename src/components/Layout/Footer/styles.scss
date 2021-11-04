@@ -1,0 +1,35 @@
+//variables
+$grid-gutter-width:           30px !default;
+.app-footer {
+    line-height: 0.15rem;
+    padding: 1.625rem $grid-gutter-width;
+    background-color: #acacac;
+    a {
+      opacity: .6;
+      
+      &:hover {
+        opacity: .87;
+      }
+    }
+  
+    ul {
+      margin: 0;
+    }
+  
+    .brand {
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      opacity: 1;
+    }
+  
+    .small {
+      cursor: pointer;
+      opacity: .87;
+    }
+  
+    .footer-row {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
