@@ -23,3 +23,14 @@ Finally, start a local server
 ```
 npm start
 ```
+
+
+## Login
+
+Login with
+
+| Username | Password |
+| ------------- | ------------- |
+| admin  | admin1234  |
+| test  | test1234  |
+
