@@ -3,6 +3,9 @@
     "version": "0.0.1",
     "private": false,
     "homepage": "",
+    "engines": {
+        "node": "10.15.3"
+    },
     "dependencies": {
         "@babel/runtime": "^7.3.1",
         "@fortawesome/fontawesome-svg-core": "^1.2.12",
